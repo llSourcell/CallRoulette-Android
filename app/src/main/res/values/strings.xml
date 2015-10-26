@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TwilioClient</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_capability_url">https://guarded-brook-6452.herokuapp.com/token</string>
+    <string name="app_hangup_url">https://guarded-brook-6452.herokuapp.com/hangup</string>
+</resources>
