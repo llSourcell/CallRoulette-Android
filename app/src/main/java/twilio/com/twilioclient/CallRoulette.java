@@ -1,5 +1,6 @@
 package twilio.com.twilioclient;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
 
@@ -14,17 +15,20 @@ import org.apache.http.client.methods.HttpUriRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MonkeyPhone implements Twilio.InitListener
+public class CallRoulette implements Twilio.InitListener
  {
     private Device mDevice;
-    private String TAG = "Monkey Phone";
+    private String TAG = "CallRoulette";
     private Connection mConnection;
     private Context mContext;
+     ProgressDialog mDialog;
 
-    public MonkeyPhone(Context context)
+
+     public CallRoulette(Context context)
     {
         this.mContext = context;
         Twilio.initialize(context, this);
+
     }
 
     @Override

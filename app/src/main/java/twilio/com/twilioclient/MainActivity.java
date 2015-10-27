@@ -7,15 +7,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.util.Log;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Chronometer;
 import android.os.SystemClock;
-
+import android.app.ProgressDialog;
 
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    private MonkeyPhone phone;
+    private CallRoulette phone;
     private EditText numberField;
     private Button callsomeoneButton;
     private Chronometer callTimer;
@@ -25,13 +26,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        phone = new MonkeyPhone(this);
+        phone = new CallRoulette(this);
 
         callsomeoneButton = (Button)  findViewById(R.id.callsomeoneButton);
         callsomeoneButton.setOnClickListener(this);
 
          callTimer = (Chronometer) findViewById(R.id.chronometer);
-
 
     }
 
