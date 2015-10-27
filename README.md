@@ -1,5 +1,5 @@
 #CallRoulette (Android Twilio Client)
-CallRoulette is a Twilio-powered Android demo app. This app was made to showcase the Twilio Android SDK how it works alongside a TwiML server. 
+CallRoulette is a Twilio-powered Android demo app. This app was made to showcase how the Twilio Android SDK works alongside a TwiML server. 
 
 ###Prerequisites
 Android Studio - http://developer.android.com/sdk/index.html 
