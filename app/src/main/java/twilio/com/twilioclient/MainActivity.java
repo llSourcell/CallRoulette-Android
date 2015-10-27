@@ -26,7 +26,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        phone = new CallRoulette(this);
+        phone = new CallRoulette(this, this);
 
         callsomeoneButton = (Button)  findViewById(R.id.callsomeoneButton);
         callsomeoneButton.setOnClickListener(this);

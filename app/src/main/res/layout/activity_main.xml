@@ -36,12 +36,18 @@
         android:visibility="invisible"
         android:textAlignment="center" />
 
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_gravity="center_horizontal" />
+
     <Button
         android:layout_width="331dp"
         android:layout_height="wrap_content"
         android:text="Call Someone"
         android:id="@+id/callsomeoneButton"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/callgradient"
         android:textSize="20dp" />
 

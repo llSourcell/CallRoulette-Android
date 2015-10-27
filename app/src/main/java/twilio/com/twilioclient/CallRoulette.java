@@ -3,17 +3,18 @@ package twilio.com.twilioclient;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
-
 import com.twilio.client.Connection;
 import com.twilio.client.Device;
 import com.twilio.client.DeviceListener;
 import com.twilio.client.Twilio;
-
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
-
 import java.util.HashMap;
 import java.util.Map;
+import android.view.View;
+import android.app.Activity;
+
+import android.widget.ProgressBar;
 
 public class CallRoulette implements Twilio.InitListener
  {
@@ -21,13 +22,16 @@ public class CallRoulette implements Twilio.InitListener
     private String TAG = "CallRoulette";
     private Connection mConnection;
     private Context mContext;
-     ProgressDialog mDialog;
+     private ProgressBar pBar;
+     public Activity activity;
 
 
-     public CallRoulette(Context context)
+     public CallRoulette(Context context, Activity _activity)
     {
         this.mContext = context;
         Twilio.initialize(context, this);
+        this.activity = _activity;
+        pBar = (ProgressBar)this.activity.findViewById(R.id.progressBar);
 
     }
 
@@ -46,6 +50,8 @@ public class CallRoulette implements Twilio.InitListener
             public void onResponse(String token) {
                 mDevice = Twilio.createDevice(token, null);
                 Log.d(TAG, "Capability token: " + token);
+                pBar.setVisibility(View.INVISIBLE);
+
             }
         }.execute();
     }
