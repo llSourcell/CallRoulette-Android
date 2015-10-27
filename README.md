@@ -4,7 +4,9 @@ CallRoulette is a Twilio-powered Android demo app. This app was made to showcase
 ###Prerequisites
 
 Android Studio - http://developer.android.com/sdk/index.html 
+
 Latest Android SDK https://www.twilio.com/docs/client/android
+
 Twilio account https://www.twilio.com/try-twilio
 
 ###How it works
@@ -16,8 +18,11 @@ The queue REST API is awesome, it allows for multiple simulatenous conversations
 ###Further Links
 
 Queue API Docs
+
 https://www.twilio.com/docs/api/rest/queue
 
+
 Accompanying TwiML Web App 
+
 https://code.hq.twilio.com/sraval/CallRouletteWebApp
 
