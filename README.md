@@ -21,3 +21,6 @@ Queue API Docs - https://www.twilio.com/docs/api/rest/queue
 
 Accompanying TwiML Web App - https://code.hq.twilio.com/sraval/CallRouletteWebApp
 
+###License
+
+MIT license (Copyright 2015 Twilio inc.)
