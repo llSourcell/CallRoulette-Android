@@ -17,12 +17,7 @@ The queue REST API is awesome, it allows for multiple simulatenous conversations
 
 ###Further Links
 
-Queue API Docs
+Queue API Docs - https://www.twilio.com/docs/api/rest/queue
 
-https://www.twilio.com/docs/api/rest/queue
-
-
-Accompanying TwiML Web App 
-
-https://code.hq.twilio.com/sraval/CallRouletteWebApp
+Accompanying TwiML Web App - https://code.hq.twilio.com/sraval/CallRouletteWebApp
 
