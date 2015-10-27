@@ -1,2 +1,2 @@
-# android-twilio-client
-A working version of Twilio Client on Android
+#CallRoulette (Android Twilio Client)
+Talk to a random person using the Twilio Android SDK!
