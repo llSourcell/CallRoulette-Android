@@ -16,8 +16,9 @@ import android.app.ProgressDialog;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
+
+    //These are our UI elements
     private CallRoulette phone;
-    private EditText numberField;
     private Button callsomeoneButton;
     private Chronometer callTimer;
 
@@ -26,11 +27,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        phone = new CallRoulette(this, this);
 
+        //Here we start our listeners and initialize our elements
+        phone = new CallRoulette(this, this);
         callsomeoneButton = (Button)  findViewById(R.id.callsomeoneButton);
         callsomeoneButton.setOnClickListener(this);
-
          callTimer = (Chronometer) findViewById(R.id.chronometer);
 
     }
@@ -40,8 +41,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view)
     {
+        //whenever a user taps the call button, connect/disconnect a phone line
         if (view.getId() == R.id.callsomeoneButton && callsomeoneButton.getText().toString().equals("Call Someone")) {
-            phone.connect("");
+            phone.connect();
             callsomeoneButton.setBackgroundResource(R.drawable.endcallgradient);
             callsomeoneButton.setText("End Call");
             callTimer.setVisibility(view.VISIBLE);

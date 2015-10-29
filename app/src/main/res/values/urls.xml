@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_capability_url">https://guarded-brook-6452.herokuapp.com/token</string>
+    <string name="app_hangup_url">https://guarded-brook-6452.herokuapp.com/hangup</string>
+</resources>
+
+

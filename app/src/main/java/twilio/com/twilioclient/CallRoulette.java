@@ -18,6 +18,8 @@ import android.widget.ProgressBar;
 
 public class CallRoulette implements Twilio.InitListener
  {
+
+     //Let's declare our vars here
     private Device mDevice;
     private String TAG = "CallRoulette";
     private Connection mConnection;
@@ -28,8 +30,10 @@ public class CallRoulette implements Twilio.InitListener
 
      public CallRoulette(Context context, Activity _activity)
     {
+        //here we initialize Twilio Client
         this.mContext = context;
         Twilio.initialize(context, this);
+        //and connect the progressbar element
         this.activity = _activity;
         pBar = (ProgressBar)this.activity.findViewById(R.id.progressBar);
 
@@ -62,10 +66,9 @@ public class CallRoulette implements Twilio.InitListener
         Log.e(TAG, "Twilio SDK couldn't start: " + e.getLocalizedMessage());
     }
 
-    public void connect(String phoneNumber)
+    public void connect()
     {
         Map<String, String> parameters = new HashMap<String, String>();
-        parameters.put("To", phoneNumber);
         mConnection = mDevice.connect(parameters, null);
         if (mConnection == null)
             Log.w(TAG, "Failed to create new connection");
